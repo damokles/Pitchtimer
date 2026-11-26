@@ -1,81 +1,138 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-<meta name="theme-color" content="#16a34a">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-<meta name="apple-mobile-web-app-title" content="PitchTimer">
-
-<link rel="manifest" href="manifest.json">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PitchTimer ⚽</title>
+    <meta name="theme-color" content="#16a34a">
 
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
+
+    <title>PitchTimer ⚽</title>
 </head>
+
 <body>
 
     <h1>⚽ PitchTimer</h1>
 
-  <div class="settings">
+    <div class="settings">
 
-    <div class="control">
-        <label>Übungszeit (Sekunden)</label>
+        <div class="control">
 
-        <div class="input-group">
-            <button type="button" onclick="changeValue('exerciseTime', -5)">−</button>
+            <label>Übung</label>
 
-            <input id="exerciseTime" type="number" value="30">
+            <div class="input-vertical">
 
-            <button type="button" onclick="changeValue('exerciseTime', 5)">+</button>
+                <button
+                    type="button"
+                    onclick="changeValue('exerciseTime', 5)">
+                    +
+                </button>
+
+                <input
+                    id="exerciseTime"
+                    type="number"
+                    value="30">
+
+                <button
+                    type="button"
+                    onclick="changeValue('exerciseTime', -5)">
+                    −
+                </button>
+
+            </div>
+
         </div>
-    </div>
 
-    <div class="control">
-        <label>Pausenzeit (Sekunden)</label>
+        <div class="control">
 
-        <div class="input-group">
-            <button type="button" onclick="changeValue('pauseTime', -5)">−</button>
+            <label>Pause</label>
 
-            <input id="pauseTime" type="number" value="15">
+            <div class="input-vertical">
 
-            <button type="button" onclick="changeValue('pauseTime', 5)">+</button>
+                <button
+                    type="button"
+                    onclick="changeValue('pauseTime', 5)">
+                    +
+                </button>
+
+                <input
+                    id="pauseTime"
+                    type="number"
+                    value="15">
+
+                <button
+                    type="button"
+                    onclick="changeValue('pauseTime', -5)">
+                    −
+                </button>
+
+            </div>
+
         </div>
-    </div>
 
-    <div class="control">
-        <label>Runden</label>
+        <div class="control">
 
-        <div class="input-group">
-            <button type="button" onclick="changeValue('rounds', -1)">−</button>
+            <label>Runden</label>
 
-            <input id="rounds" type="number" value="5">
+            <div class="input-vertical">
 
-            <button type="button" onclick="changeValue('rounds', 1)">+</button>
+                <button
+                    type="button"
+                    onclick="changeValue('rounds', 1)">
+                    +
+                </button>
+
+                <input
+                    id="rounds"
+                    type="number"
+                    value="5">
+
+                <button
+                    type="button"
+                    onclick="changeValue('rounds', -1)">
+                    −
+                </button>
+
+            </div>
+
         </div>
-    </div>
 
-</div>
+    </div>
 
     <div class="buttons">
-        <button onclick="startTimer()">Start</button>
-        <button onclick="pauseTimer()">Pause</button>
-        <button onclick="resetTimer()">Reset</button>
-        <button onclick="toggleFullscreen()">Vollbild</button>
+
+        <button onclick="startTimer()">
+            Start
+        </button>
+
+        <button onclick="pauseTimer()">
+            Pause
+        </button>
+
+        <button onclick="resetTimer()">
+            Reset
+        </button>
+
     </div>
 
-    <div id="round">Runde 0 / 0</div>
+    <div id="round">
+        Runde 0 / 0
+    </div>
 
-    <div id="status">Bereit</div>
+    <div id="status">
+        Bereit
+    </div>
 
-    <div id="timer">00:00</div>
+    <div id="timer">
+        00:00
+    </div>
 
     <div id="nextAction"></div>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
